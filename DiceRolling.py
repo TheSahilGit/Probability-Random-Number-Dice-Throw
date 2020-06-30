@@ -7,6 +7,7 @@
 import numpy as np
 import matplotlib.pyplot as plt
 
+
 ones = []
 twos = []
 threes = []
@@ -27,24 +28,24 @@ s = 0
 x = 0
 
 for i in range(throws):
-    a = np.random.randint(1, 7)
+    a = np.random.random()
 
-    if a == 1:
+    if 0 * probability < a < 1 * probability:
         o += 1
 
-    elif a == 2:
+    elif probability < a < 2 * probability:
         tw += 1
 
-    elif a == 3:
+    elif 2*probability < a < 3 * probability:
         th += 1
 
-    elif a == 4:
+    elif 3 * probability < a < 4 * probability:
         fo += 1
 
-    elif a == 5:
+    elif 4 * probability < a < 5 * probability:
         fi += 1
 
-    elif a == 6:
+    elif 5 * probability < a < 6 * probability:
         s += 1
 
     x += 1
@@ -56,6 +57,7 @@ for i in range(throws):
     fives.append(fi)
     sixes.append(s)
     xs.append(x)
+
 
 plt.plot(xs, ones)
 plt.plot(xs, twos)
